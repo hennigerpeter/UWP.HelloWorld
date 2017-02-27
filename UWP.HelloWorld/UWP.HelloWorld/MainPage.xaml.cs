@@ -17,14 +17,27 @@ using Windows.UI.Xaml.Navigation;
 
 namespace UWP.HelloWorld
 {
-    /// <summary>
-    /// Eine leere Seite, die eigenständig verwendet oder zu der innerhalb eines Rahmens navigiert werden kann.
-    /// </summary>
-    public sealed partial class MainPage : Page
+  /// <summary>
+  /// Eine leere Seite, die eigenständig verwendet oder zu der innerhalb eines Rahmens navigiert werden kann.
+  /// </summary>
+  public sealed partial class MainPage : Page
+  {
+    public MainPage()
     {
-        public MainPage()
-        {
-            this.InitializeComponent();
-        }
+      this.InitializeComponent();
     }
+
+    /// <summary>
+    /// There is actually no MVVM implentend in this rudimental App.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void button_Click(object sender, RoutedEventArgs e)
+    {
+      if (txtbox.Text != "") 
+            txtblock.Text = "Hello " +txtbox.Text; 
+         else 
+            txtblock.Text = "You have not write your name";
+    }
+  }
 }
