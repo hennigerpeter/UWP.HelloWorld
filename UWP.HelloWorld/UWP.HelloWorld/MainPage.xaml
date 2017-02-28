@@ -10,16 +10,16 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel HorizontalAlignment = "Center">
-      <TextBlock Text = "Hello, world!"  Margin = "20"  Width = "200" 
+      <TextBlock Text = "Hallo Welt!"  Margin = "20"  Width = "200" 
             HorizontalAlignment = "Left"/>
 
-      <TextBlock Text = "Write your name." Margin = "20" Width = "200" 
+      <TextBlock Text = "Schreib deinen Namen:" Margin = "20" Width = "200" 
             HorizontalAlignment = "Left"/>
 
       <TextBox x:Name = "txtbox"  Width = "280" Margin = "20" 
             HorizontalAlignment = "Left"/>
 
-      <Button x:Name = "button" Content = "Click Me" Margin = "20" 
+      <Button x:Name = "button" Content = "Hier klicken" Margin = "20" 
             Click = "button_Click"/>
 
       <TextBlock x:Name = "txtblock" HorizontalAlignment = "Left" 

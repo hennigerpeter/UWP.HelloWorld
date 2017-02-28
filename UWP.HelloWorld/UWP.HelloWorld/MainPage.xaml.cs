@@ -28,16 +28,23 @@ namespace UWP.HelloWorld
     }
 
     /// <summary>
+    /// Welcomes the User with a short text and SpeechSynthesis.
     /// There is actually no MVVM implentend in this rudimental App.
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
-    private void button_Click(object sender, RoutedEventArgs e)
+    private async void button_Click(object sender, RoutedEventArgs e)
     {
-      if (txtbox.Text != "") 
-            txtblock.Text = "Hello " +txtbox.Text; 
-         else 
-            txtblock.Text = "You have not write your name";
+      if (txtbox.Text != "")
+        txtblock.Text = "Hallo " + txtbox.Text + "!";
+      else
+        txtblock.Text = "Du hast keinen Namen angegeben.";
+
+      MediaElement mediaElement = new MediaElement();
+      var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
+      Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync(txtblock.Text);
+      mediaElement.SetSource(stream, stream.ContentType);
+      mediaElement.Play();
     }
   }
 }
