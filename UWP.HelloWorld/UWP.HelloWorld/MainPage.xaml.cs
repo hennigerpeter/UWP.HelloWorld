@@ -46,5 +46,16 @@ namespace UWP.HelloWorld
       mediaElement.SetSource(stream, stream.ContentType);
       mediaElement.Play();
     }
+
+    /// <summary>
+    /// Possibility to activate the Button by pressing the enter
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    public void OnKeyboardInput(object sender, KeyRoutedEventArgs e)
+    {
+      if (e.Key == Windows.System.VirtualKey.Enter)
+        button_Click(this, null);
+    }
   }
 }

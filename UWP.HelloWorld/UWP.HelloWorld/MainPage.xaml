@@ -17,7 +17,7 @@
             HorizontalAlignment = "Left"/>
 
       <TextBox x:Name = "txtbox"  Width = "280" Margin = "20" 
-            HorizontalAlignment = "Left"/>
+            HorizontalAlignment = "Left" KeyDown="OnKeyboardInput"/>
 
       <Button x:Name = "button" Content = "Hier klicken" Margin = "20" 
             Click = "button_Click"/>
